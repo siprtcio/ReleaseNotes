@@ -1,0 +1,44 @@
+```markdown
+## [v1.0.0] (2022-08-15)
+
+> Description
+
+### Upgrade Steps
+* Upgrade the telephony servers with help of siprtc
+* Regression test
+
+### Breaking Changes
+* 
+
+### New Features
+* Conference Participant mute/unmute/hold/unhold support added
+* Conference mute support added in conference xml
+* Conference mute/unmute/hold/unhold parameters in Get Participants API
+* Conference record support added using xml
+* Call Recording Listing on per callsid including live recording also
+* Call Recording Stop/Pause/Start support added
+* Call update api enhanced to support call transfer/barge
+* Custom sip headers support added for api/xml
+* Posting custom sip headers to action url
+* Conference recording statuscallback added
+* Live calls are available in cdr
+* Compressed sip header support added based on environment variable
+* Support for private sip telephony remove specific prefix based on sbc ip (environment variable based)
+
+### Bug Fixes
+* Call being hangup issues on call update to api calls are fixed
+* Conference Participant Listing Fixed incase of no filters are provided
+* Make statuscallback method case insensitive
+* Api Sip calls are not working when custom headers are being sent in To header
+* Call was not working if udp packet size becomes more than 1500 byte (compressed sip header)
+* Api Calls was not working if sip is registered on webrtc
+
+### Performance Improvements
+* Conference Status Queue Enhancement only related events will be queued and discard the rest of events
+* Logging is improvised and moved it to central git modules
+* Omit empty fields from api response/statuscallback to utilise better bandwidth
+
+### Security Improvements
+* Removed extra sipheaders before sending to carrier to utilise better bandwidth
+
+```
